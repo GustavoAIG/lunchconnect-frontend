@@ -14,3 +14,27 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# LunchConnect – Frontend
+
+Frontend desarrollado con React para la plataforma LunchConnect: almuerzos de networking en restaurantes.
+
+## 🛠 Tecnologías
+- React + Vite
+- TailwindCSS
+- Axios
+- Zustand / Context API (según preferencia)
+- React Router
+
+## 🚀 Configuración
+1. Clonar repo  
+2. `npm install`  
+3. Crear un archivo `.env`  
+4. Añadir la URL del backend (`VITE_API_URL=https://...`)  
+5. `npm run dev`  
+
+## 🧩 Funcionalidades base
+- Login / Registro
+- Dashboard de eventos
+- Crear y unirse a almuerzos
+- Perfil de usuario
+- Panel admin (opcional)
