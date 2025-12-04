@@ -1,3 +1,5 @@
+
+
 import { useState } from 'react';
 
 // Componente CreateGroup mejorado
@@ -28,11 +30,14 @@ const CreateGroup = ({ onClose, restaurante }) => {
     { id: 8, nombre: 'Daniel Vargas', esAmigo: false, avatar: 'D' },
   ];
 
-  // Filtrar usuarios según la búsqueda (sin filtro por soloAmigos)
-  const usuariosFiltrados = listaAmigos.filter(usuario =>
-    usuario.nombre.toLowerCase().includes(busqueda.toLowerCase()) &&
-    !invitados.find(inv => inv.id === usuario.id)
-  );
+  // Filtrar usuarios según la búsqueda y el checkbox "Solo Amigos"
+  const usuariosFiltrados = listaAmigos.filter(usuario => {
+    const coincideBusqueda = usuario.nombre.toLowerCase().includes(busqueda.toLowerCase());
+    const noEstaAgregado = !invitados.find(inv => inv.id === usuario.id);
+    const cumpleFiltroAmigos = soloAmigos ? usuario.esAmigo : true;
+    
+    return coincideBusqueda && noEstaAgregado && cumpleFiltroAmigos;
+  });
 
   const agregarInvitado = (usuario) => {
     if (!capacidad || invitados.length < parseInt(capacidad) - 1) {
