@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import EventModal from "./EventModal";
+import React, { useState } from "react";
+import EventModal from "./EventModal";
 
 const ResultsSection = () => {
+  const [selectedEvent, setSelectedEvent] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
   // Datos simulados 
   const results = [
@@ -43,6 +46,12 @@ const ResultsSection = () => {
         onClose={() => setSelectedEvent(null)} 
         event={selectedEvent} 
       />
+      {/* RENDERIZAR MODAL */}
+      <EventModal 
+        isOpen={!!selectedEvent} 
+        onClose={() => setSelectedEvent(null)} 
+        event={selectedEvent} 
+      />
       <div className="max-w-7xl mx-auto px-6">
         
         {/* --- HEADER: TÍTULO + VARIABLE TEMPORAL --- */}
@@ -61,6 +70,7 @@ const ResultsSection = () => {
             <div
               key={item.id}
               className="bg-primary rounded-3xl p-6 text-white shadow-lg flex flex-col lg:flex-row gap-8 items-start lg:items-center"
+              className="bg-primary rounded-3xl p-6 text-white shadow-lg flex flex-col lg:flex-row gap-8 items-start lg:items-center"
             >
               
               {/* COLUMNA 1: INFO PRINCIPAL (40% del ancho en PC) */}
@@ -69,6 +79,7 @@ const ResultsSection = () => {
                 {/* Título + Botón Únete */}
                 <div className="flex flex-wrap items-center gap-4">
                   <h3 className="text-2xl font-bold">{item.title}</h3>
+                  <button onClick={() => setSelectedEvent(item)} className="bg-secondary cursor-pointer hover:bg-black text-white text-xs px-4 py-1.5 rounded-full font-semibold transition-colors">
                   <button onClick={() => setSelectedEvent(item)} className="bg-secondary cursor-pointer hover:bg-black text-white text-xs px-4 py-1.5 rounded-full font-semibold transition-colors">
                     Únete
                   </button>
