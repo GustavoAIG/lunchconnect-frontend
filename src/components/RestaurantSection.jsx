@@ -1,6 +1,6 @@
 
 
-import { useState } from 'react';
+import { useState } from 'react'; 
 
 // Componente CreateGroup mejorado
 const CreateGroup = ({ onClose, restaurante }) => {
