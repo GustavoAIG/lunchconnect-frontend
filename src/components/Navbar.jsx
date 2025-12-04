@@ -37,7 +37,7 @@ const Navbar = () => {
 
         {/* MENÚ DE ESCRITORIO */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="hover:scale-110 font-medium transition-transform duration-300">Explorar</Link>
+          <Link to="/explorar" className="hover:scale-110 font-medium transition-transform duration-300">Explorar</Link>
           <Link to="/unete" className="hover:scale-110 font-medium transition-transform duration-300">Unete</Link>
           
           {/* LÓGICA DE ICONO DE PERFIL */}
@@ -70,7 +70,7 @@ const Navbar = () => {
           
           {/* Opción 1: Explorar */}
           <Link 
-            to="/" 
+            to="/explorar" 
             onClick={closeMenu} // Cierra el menú al dar clic
             className="text-center font-medium py-4 border-b border-secondary hover:bg-secondary transition-colors w-full block"
           >
