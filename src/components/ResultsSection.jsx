@@ -77,7 +77,7 @@ const ResultsSection = () => {
                 {/* Imagen + Dirección + Aforo */}
                 <div className="flex gap-4 mt-2">
                   {/* Imagen Placeholder */}
-                  <div className="w-24 h-24 bg-secondary/50 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-24 h-24 bg-secondary/50 rounded-xl flex items-center justify-center shrink-0">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white/20" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
                     </svg>
